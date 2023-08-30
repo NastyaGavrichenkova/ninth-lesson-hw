@@ -1,7 +1,15 @@
+import allure
+from allure_commons.types import Severity
 from selene import be, by
 from selene.support.shared import browser
 
 
+@allure.tag("web")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "Gavrichenkova Anastasia")
+@allure.feature("Search")
+@allure.story("Search a repository and an check issue into it")
+@allure.link("https://github.com", name="Testing")
 def test_search_selene():
     browser.open('https://github.com')
 
